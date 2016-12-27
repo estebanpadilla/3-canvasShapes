@@ -1,0 +1,15 @@
+{
+  "name": "canvasShapes",
+  "version": "1.0.0",
+  "description": "Adding shapes to the html canvas.",
+  "main": "server.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "Esteban Padilla",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}
