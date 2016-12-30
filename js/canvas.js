@@ -20,15 +20,38 @@ function init() {
     const box = new Box(10, 10, 40, 40, 'red');
     const ball = new Ball(80, 30, 20, 'blue');
     const triangle = new Triangle(110, 10, 40, 'green');
-    const quadraticCurve = new QuadraticCurve(160, 50, 210, 0, 260, 50, 'red');
+    const star = new Star(170, 30, 25, 10, 5, 'orange', -90);
+    const quadraticCurve = new QuadraticCurve(200, 50, 225, 20, 250, 50, 'red');
+    const bezierCurve = new BezierCurve(270, 50, 270, 20, 320, 20, 320, 50, 'blue');
+    const allStar = new Star(200, 230, 100, 50, 5, '#ee3344', -90);
+    const text = new Text(200, 360, 40, 'Hello World', '#ee3344');
 
     function update() {
         stats.begin();
+
+        context.clearRect(0, 0, canvas.width, canvas.height);
 
         box.draw(context);
         ball.draw(context);
         triangle.draw(context);
         quadraticCurve.draw(context);
+        bezierCurve.draw(context);
+        star.draw(context);
+
+        //Apply a drop shawdow
+        context.shadowColor = 'rgba(0, 0, 0, 0.25)';
+        context.shadowBlur = 10;
+        context.shadowOffsetX = 5;
+        context.shadowOffsetY = 5;
+        allStar.draw(context);
+
+        //Disable the drop shadow
+        context.shadowColor = 'none';
+        context.shadowBlur = 0;
+        context.shadowOffsetX = 0;
+        context.shadowOffsetY = 0;
+
+        text.draw(context);
 
         requestAnimationFrame(update);
         stats.end();
