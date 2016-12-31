@@ -1,13 +1,14 @@
 window.addEventListener('load', init, false);
-var canvas = undefined;
-var context = undefined;
-
-const canvasXPos = 30;
-const canvasYPos = 75;
-const canvasWidth = 400;
-const canvasHeight = 400;
 
 function init() {
+
+    var canvas = undefined;
+    var context = undefined;
+
+    const canvasXPos = 30;
+    const canvasYPos = 75;
+    const canvasWidth = 400;
+    const canvasHeight = 400;
     console.log('load');
 
     var stats = new Stats();
@@ -23,7 +24,9 @@ function init() {
     const star = new Star(170, 30, 25, 10, 5, 'orange', -90);
     const quadraticCurve = new QuadraticCurve(200, 50, 225, 20, 250, 50, 'red');
     const bezierCurve = new BezierCurve(270, 50, 270, 20, 320, 20, 320, 50, 'blue');
-    const allStar = new Star(200, 230, 100, 50, 5, '#ee3344', -90);
+
+    const allStar = new Star(200, 230, 50, 30, 5, '#ee3344', -90);
+
     const text = new Text(200, 360, 40, 'Hello World', '#ee3344');
 
     function update() {
