@@ -1,5 +1,5 @@
 {
-  "name": "canvasShapes",
+  "name": "canvasshapes",
   "version": "1.0.0",
   "description": "Adding shapes to the html canvas.",
   "main": "server.js",
