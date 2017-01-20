@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Adding shapes to the html canvas.",
   "scripts": {
-    "start": "browser-sync start --s --f *.css, *.js, *.html"
+    "start": "browser-sync start --s --f css/style.css, *.js, index.html"
   },
   "keywords": [],
   "author": "Esteban Padilla",

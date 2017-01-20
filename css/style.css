@@ -1,5 +1,9 @@
 html, body {
     padding: 0px;
     margin: 0px;
-    background: #b5e2ef;
+}
+
+canvas {
+    background: #2b0d3b;
+    position: absolute;
 }

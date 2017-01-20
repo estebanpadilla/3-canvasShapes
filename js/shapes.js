@@ -23,10 +23,6 @@ Box.prototype.render = function render() {
     this.context.fill();
 }
 
-Box.prototype.update = function () {
-    this.render();
-}
-
 /**
  * Defines a Box shape for the canvas
  * @constructor
@@ -51,12 +47,6 @@ Ball.prototype.render = function render() {
     this.context.fill();
     this.context.closePath();
 }
-Ball.prototype.update = function () {
-    this.render();
-}
-
-
-
 
 /**
  * Defines a Triangle shape for the canvas
@@ -83,10 +73,6 @@ Triangle.prototype.render = function () {
     this.context.lineTo(this.x, (this.y + this.size));
     this.context.closePath();
     this.context.fill();
-}
-
-Triangle.prototype.update = function () {
-    this.render();
 }
 
 /**
@@ -122,10 +108,6 @@ QuadraticCurve.prototype.render = function () {
     this.context.lineWidth = 4;
     this.context.lineCap = 'round';
     this.context.stroke();
-}
-
-QuadraticCurve.prototype.update = function () {
-    this.render();
 }
 
 /**
@@ -167,10 +149,6 @@ BezierCurve.prototype.render = function () {
     this.context.stroke();
 }
 
-BezierCurve.prototype.update = function () {
-    this.render();
-}
-
 /**
  * Defines a Line shape for the canvas
  * @constructor
@@ -204,10 +182,6 @@ Line.prototype.render = function () {
     this.context.stroke();
 }
 
-Line.prototype.update = function () {
-    this.render();
-}
-
 /**
  * Defines a Text shape for the canvas
  * @constructor
@@ -233,8 +207,3 @@ TextBox.prototype.render = function () {
     this.context.textAlign = 'left';
     this.context.fillText(this.text, this.x, this.y);
 }
-
-TextBox.prototype.update = function () {
-    this.render();
-}
-
